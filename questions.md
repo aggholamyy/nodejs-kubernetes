@@ -52,3 +52,24 @@ sudo apt-get autoclean
 sudo apt-get autoremove --purge
 sudo du -sk /var/log/* | sort -nr | head -10
 ```
+## Question 5
+`The following NodeJs app has been developed, and the team is requesting a complete deployment approach. You have a pair of ACCESS_KEY and SECRET_KEY of an AWS user and also you can tell the customer what they need to do from the AWS console if you need.`
+
+All the files in this gist are for the Question5, and I made the deployment based on kubernetes cluster on my labtop which created based on k3d project by rancher.
+
+1. 
+   ```bash
+   docker build . -t shardlabs_node_app
+   ```
+1. 
+   ```bash
+   k3d image import -c <k8s cluster name> shardlabs_nde_app
+   ```
+1. 
+   ```bash
+   k apply -f deployment.yaml
+   ```
+1. ```bash
+   k apply -f ingress.yaml
+   ```
+1. Based on the port you choose for loadbalancer of k8s cluster of k3d now you can access the page by browser, in my case the lb maped on port 8080, therefor I can access the page by this address `http://localhost:8080/`
