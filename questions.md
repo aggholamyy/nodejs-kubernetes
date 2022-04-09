@@ -51,6 +51,7 @@ sudo journalctl --vacuum-size 5M
 sudo apt-get autoclean
 sudo apt-get autoremove --purge
 sudo du -sk /var/log/* | sort -nr | head -10
+rm -f <biggest log files if is it possible>
 ```
 ## Question 5
 `The following NodeJs app has been developed, and the team is requesting a complete deployment approach. You have a pair of ACCESS_KEY and SECRET_KEY of an AWS user and also you can tell the customer what they need to do from the AWS console if you need.`
