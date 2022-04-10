@@ -64,7 +64,7 @@ All the files in this gist are for the Question5, and I made the deployment base
    ```
 1. 
    ```bash
-   k3d image import -c <k8s cluster name> shardlabs_nde_app
+   k3d image import -c <k8s cluster name> shardlabs_node_app
    ```
 1. 
    ```bash
